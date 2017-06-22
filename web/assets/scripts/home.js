@@ -7,12 +7,28 @@ if (currentUser) {
 
 // Login
 
-var btn = document.querySelector('.btn');
+var btnGoogle = document.querySelector('.btn-google');
 
-btn.addEventListener('click', function(e) {
+btnGoogle.addEventListener('click', function(e) {
 	var googleProvider = new auth.provider.Google();
 	googleProvider.setProviderScope('email');
 	auth.signInWithRedirect(googleProvider);
+});
+
+var btnFacebook = document.querySelector('.btn-facebook');
+
+btnFacebook.addEventListener('click', function(e) {
+	var facebookProvider = new auth.provider.Facebook();
+	facebookProvider.setProviderScope('email');
+	auth.signInWithRedirect(facebookProvider);
+});
+
+var btnGithub = document.querySelector('.btn-github');
+
+btnGithub.addEventListener('click', function(e) {
+	var githubProvider = new auth.provider.Github();
+	githubProvider.setProviderScope('email');
+	auth.signInWithRedirect(githubProvider);
 });
 
 // Redirect

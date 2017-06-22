@@ -19,6 +19,7 @@ body {
 	border-radius: 4px;
 	border: 0px solid #fff;
 	margin: 0;
+	margin-bottom: 10px;
 	float: left;
 	cursor: pointer;
 	font-weight: 600;
@@ -52,10 +53,38 @@ body {
 }
 
 .btn.btn-google {
-	background: #4285f4;
+	background: #00695C;
 	transition: background .3s ease-in-out;
 }
 
 .btn.btn-google:hover {
-	background: rgba(66,133,244, 0.8);
+	background: rgba(0,105,92, 0.8);
+}
+
+.btn .brand .icon-facebook {
+	background: url('/assets/images/icon-facebook-white.png') no-repeat;
+	background-size: 24px 24px;
+}
+
+.btn.btn-facebook {
+	background: #01579B;
+	transition: background .3s ease-in-out;
+}
+
+.btn.btn-facebook:hover {
+	background: rgba(1,87,155, 0.8);
+}
+
+.btn .brand .icon-github {
+	background: url('/assets/images/icon-github-white.png') no-repeat;
+	background-size: 24px 24px;
+}
+
+.btn.btn-github {
+	background: #4527A0;
+	transition: background .3s ease-in-out;
+}
+
+.btn.btn-github:hover {
+	background: rgba(69,39,160, 0.8);
 }

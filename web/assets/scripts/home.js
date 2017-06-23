@@ -19,7 +19,7 @@ var btnFacebook = document.querySelector('.btn-facebook');
 
 btnFacebook.addEventListener('click', function(e) {
 	var facebookProvider = new auth.provider.Facebook();
-	facebookProvider.setProviderScope('email');
+	facebookProvider.setProviderScope('public_profile email');
 	auth.signInWithRedirect(facebookProvider);
 });
 

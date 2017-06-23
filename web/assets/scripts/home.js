@@ -1,4 +1,4 @@
-var auth = WeDeploy.auth('auth-ccc.liferay.com');
+var auth = WeDeploy.auth('auth-ccc.wedeploy.sh');
 var currentUser = WeDeploy.auth().currentUser;
 
 if (currentUser) {
@@ -27,7 +27,7 @@ var btnGithub = document.querySelector('.btn-github');
 
 btnGithub.addEventListener('click', function(e) {
 	var githubProvider = new auth.provider.Github();
-	githubProvider.setProviderScope('email');
+	githubProvider.setProviderScope('user:email');
 	auth.signInWithRedirect(githubProvider);
 });
 

@@ -8,7 +8,7 @@ if (!currentUser) {
 
 // Logout
 
-var auth = WeDeploy.auth('auth-ccc.liferay.com');
+var auth = WeDeploy.auth('auth-ccc.wedeploy.sh');
 var logout = document.querySelector('.profile-logout');
 
 logout.addEventListener('click', function() {

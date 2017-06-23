@@ -58174,7 +58174,7 @@ Phaser.BitmapText = function (game, x, y, font, text, size, align) {
     * @property {number} _fontSize - Internal cache var.
     * @private
     */
-    this._fontSize = size;
+    this._fontSize = 32;
 
     /**
     * @property {string} _align - Internal cache var.

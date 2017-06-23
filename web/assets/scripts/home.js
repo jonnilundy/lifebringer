@@ -37,7 +37,7 @@ auth.onSignIn(function(currentUser) {
 	currentUser.id = window.md5(currentUser.email);
 
 	WeDeploy
-		.data('db-ccc.liferay.com')
+		.data('db-ccc.wedeploy.sh')
 		.where('id', currentUser.id)
 		.get('players')
 		.then(function(user) {
@@ -54,7 +54,7 @@ auth.onSignIn(function(currentUser) {
 
 function createUser(currentUser) {
 	WeDeploy
-		.data('db-ccc.liferay.com')
+		.data('db-ccc.wedeploy.sh')
 		.create('players', {
 			id: currentUser.id,
 			name: currentUser.name,

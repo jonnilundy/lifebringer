@@ -22,7 +22,7 @@ logout.addEventListener('click', function() {
 var table = document.querySelector('table tbody');
 
 WeDeploy
-	.data('db-ccc.liferay.com')
+	.data('db-ccc.wedeploy.sh')
 	.orderBy('maxScore', 'desc')
 	.limit(500)
 	.get('players')

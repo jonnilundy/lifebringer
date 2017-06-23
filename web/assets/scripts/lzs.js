@@ -74,7 +74,7 @@
             var id = window.md5(currentUser.email);
 
             WeDeploy
-                .data('db-ccc.liferay.com')
+                .data('db-ccc.wedeploy.sh')
                 .where('id', id)
                 .get('players')
                 .then(function(result) {
@@ -101,7 +101,7 @@
                     };
 
                     WeDeploy
-                        .data('db-ccc.liferay.com')
+                        .data('db-ccc.wedeploy.sh')
                         .update('players/' + id, player)
                         .then(function() {
                             setTimeout(redirectToGameOverPage, 2000);

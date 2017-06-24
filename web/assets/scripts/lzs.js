@@ -249,18 +249,18 @@
             stateText.anchor.setTo(0.5, 0.5);
             stateText.visible = false;
             stateText.font = 'badaboom';
-            stateText.fontSize  = '56';
+            stateText.fontSize  = 56;
 
             bonusText = lzs.add.text(lzs.world.centerX, lzs.world.centerY - 100, ' ', {fill: '#E9B3F7'});
             bonusText.anchor.setTo(0.5, 0.5);
             bonusText.visible = false;
             bonusText.font = 'badaboom';
-            bonusText.fontSize  = '56';
+            bonusText.fontSize  = 56;
 
             //Score
-            scoreText = lzs.add.text(20, 20, scoreString + score, {font: '42px badaboom', fill: '#E9B3F7' });
+            scoreText = lzs.add.text(20, 20, scoreString + score, {fill: '#E9B3F7' });
             scoreText.font = 'badaboom';
-            scoreText.fontSize  = '42';
+            scoreText.fontSize  = 42;
             scoreText.visible = false;
 
             if (!lzs.device.desktop){

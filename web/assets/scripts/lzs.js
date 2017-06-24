@@ -258,9 +258,9 @@
             bonusText.fontSize  = '56';
 
             //Score
-            scoreText = lzs.add.text(20, 20, scoreString + score, {fill: '#E9B3F7' });
+            scoreText = lzs.add.text(20, 20, scoreString + score, {font: '42px badaboom', fill: '#E9B3F7' });
             scoreText.font = 'badaboom';
-            scoreText.fontSize  = '84';
+            scoreText.fontSize  = '42';
             scoreText.visible = false;
 
             if (!lzs.device.desktop){

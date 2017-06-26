@@ -1,11 +1,11 @@
 var currentUser = WeDeploy.auth().currentUser;
 
-// if (currentUser) {
+if (currentUser) {
     runLifeBringer({
         currentUser: currentUser,
         weDeploy : WeDeploy
     });
-// }
-// else {
-//     document.location.href = '/';
-// }
+}
+else {
+    document.location.href = '/';
+}

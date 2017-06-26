@@ -24,7 +24,7 @@
 		"path": "/players/*",
 		"method": ["PATCH", "PUT"],
 		"auth": {
-			"validator": "$auth.email === $data.document().child('email')"
+			"validator": "$auth.email == $data.document().child('email')"
 		},
 		"data": true 
 	}

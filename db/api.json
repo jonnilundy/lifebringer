@@ -1,7 +1,7 @@
 [
 	{
 		"path": "/players/*",
-		"method": ["GET", "PATCH", "PUT"],
+		"method": ["GET"],
 		"data": true
 	},
 	{
@@ -16,7 +16,15 @@
 		"path": "/players/*",
 		"method": ["POST"],
 		"auth": {
-			"validator": "$auth != null"
+			"validator": "$auth !== null"
+		},
+		"data": true 
+	},
+	{
+		"path": "/players/*",
+		"method": ["PATCH", "PUT"],
+		"auth": {
+			"validator": "$auth.email === $data.document().child('email')"
 		},
 		"data": true 
 	}

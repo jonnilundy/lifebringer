@@ -1,12 +1,12 @@
 [
 	{
 		"path": "/players/*",
-		"method": ["GET", "POST"],
+		"method": ["GET", "PATCH", "PUT", "POST"],
 		"data": true
 	},
 	{
 		"path": "/players/*",
-		"method": ["PATCH", "PUT", "DELETE"],
+		"method": ["DELETE"],
 		"auth": {
 			"validator": "$auth.email === jonathan.lundy@liferay.com"
 		},

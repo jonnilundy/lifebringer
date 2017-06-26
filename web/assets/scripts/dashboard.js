@@ -8,7 +8,7 @@ if (!currentUser) {
 
 // Logout
 
-var auth = WeDeploy.auth('auth-ccctestwedeploy.sh');
+var auth = WeDeploy.auth('auth-ccctest.wedeploy.sh');
 var logout = document.querySelector('.profile-logout');
 
 logout.addEventListener('click', function() {
@@ -22,7 +22,7 @@ logout.addEventListener('click', function() {
 var table = document.querySelector('table tbody');
 
 WeDeploy
-	.data('db-ccctestwedeploy.sh')
+	.data('db-ccctest.wedeploy.sh')
 	.orderBy('maxScore', 'desc')
 	.limit(500)
 	.get('players')

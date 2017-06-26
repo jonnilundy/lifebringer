@@ -1,4 +1,4 @@
-var auth = WeDeploy.auth('auth-ccc.wedeploy.sh');
+var auth = WeDeploy.auth('auth-ccctesttest.wedeploy.sh');
 var currentUser = WeDeploy.auth().currentUser;
 
 if (currentUser) {
@@ -37,7 +37,7 @@ auth.onSignIn(function(currentUser) {
 	currentUser.id = window.md5(currentUser.email);
 
 	WeDeploy
-		.data('db-ccc.wedeploy.sh')
+		.data('db-ccctesttest.wedeploy.sh')
 		.where('id', currentUser.id)
 		.get('players')
 		.then(function(user) {
@@ -54,7 +54,7 @@ auth.onSignIn(function(currentUser) {
 
 function createUser(currentUser) {
 	WeDeploy
-		.data('db-ccc.wedeploy.sh')
+		.data('db-ccctesttest.wedeploy.sh')
 		.create('players', {
 			id: currentUser.id,
 			name: currentUser.name,

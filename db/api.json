@@ -16,15 +16,7 @@
 		"path": "/players/*",
 		"method": ["POST"],
 		"auth": {
-			"validator": "$auth !== null"
-		},
-		"data": true 
-	},
-	{
-		"path": "/players/*",
-		"method": ["PATCH", "PUT"],
-		"auth": {
-			"validator": "$auth.email === $data.document().child('email')"
+			"validator": "$auth != null"
 		},
 		"data": true 
 	}

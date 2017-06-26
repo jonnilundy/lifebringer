@@ -7,9 +7,6 @@
 	{
 		"path": "/players/*",
 		"method": ["DELETE"],
-		"auth": {
-			"validator": "$auth.email == jonathan.lundy@liferay.com"
-		},
 		"data": true
 	}
 ]

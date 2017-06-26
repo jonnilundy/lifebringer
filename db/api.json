@@ -11,5 +11,5 @@
 			"validator": "$auth.email == jonathan.lundy@liferay.com"
 		},
 		"data": true
-	},
+	}
 ]

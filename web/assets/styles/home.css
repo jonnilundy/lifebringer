@@ -61,20 +61,6 @@ body {
 	background: rgba(0,105,92, 0.8);
 }
 
-.btn .brand .icon-facebook {
-	background: url('/assets/images/icon-facebook-white.png') no-repeat;
-	background-size: 24px 24px;
-}
-
-.btn.btn-facebook {
-	background: #01579B;
-	transition: background .3s ease-in-out;
-}
-
-.btn.btn-facebook:hover {
-	background: rgba(1,87,155, 0.8);
-}
-
 .btn .brand .icon-github {
 	background: url('/assets/images/icon-github-white.png') no-repeat;
 	background-size: 24px 24px;

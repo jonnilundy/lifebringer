@@ -15,14 +15,6 @@ btnGoogle.addEventListener('click', function(e) {
 	auth.signInWithRedirect(googleProvider);
 });
 
-// var btnFacebook = document.querySelector('.btn-facebook');
-
-// btnFacebook.addEventListener('click', function(e) {
-// 	var facebookProvider = new auth.provider.Facebook();
-// 	facebookProvider.setProviderScope('public_profile,email');
-// 	auth.signInWithRedirect(facebookProvider);
-// });
-
 var btnGithub = document.querySelector('.btn-github');
 
 btnGithub.addEventListener('click', function(e) {

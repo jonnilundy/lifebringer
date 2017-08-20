@@ -1,5 +1,5 @@
-var auth = WeDeploy.auth('https://auth-lifebringer.wedeploy.io');
-var data = WeDeploy.data('https://db-lifebringer.wedeploy.io');
+var auth = WeDeploy.auth('https://auth-andicom.wedeploy.io');
+var data = WeDeploy.data('https://db-andicom.wedeploy.io');
 
 // Profile
 

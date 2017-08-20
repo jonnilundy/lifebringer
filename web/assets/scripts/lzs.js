@@ -74,7 +74,7 @@
             var id = window.md5(currentUser.email);
 
             WeDeploy
-                .data('https://db-lifebringer.wedeploy.io')
+                .data('https://db-andicom.wedeploy.io')
                 .where('id', id)
                 .get('players')
                 .then(function(result) {
@@ -101,7 +101,7 @@
                     };
 
                     WeDeploy
-                        .data('https://db-lifebringer.wedeploy.io')
+                        .data('https://db-andicom.wedeploy.io')
                         .update('players/' + id, player)
                         .then(function() {
                             setTimeout(redirectToGameOverPage, 2000);

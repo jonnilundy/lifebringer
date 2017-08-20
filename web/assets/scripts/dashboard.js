@@ -1,33 +1,40 @@
+var auth = WeDeploy.auth('https://auth-lifebringer.wedeploy.io');
+var data = WeDeploy.data('https://db-lifebringer.wedeploy.io');
+
 // Profile
 
-var currentUser = WeDeploy.auth().currentUser;
-
-if (!currentUser) {
+if (!auth.currentUser) {
 	document.location.href = '/';
 }
 
 // Logout
 
-var auth = WeDeploy.auth('auth-ccc.wedeploy.sh');
 var logout = document.querySelector('.profile-logout');
 
 logout.addEventListener('click', function() {
-	auth.signOut().then(function() {
-		document.location.href = '/';
-	});
+	auth.signOut()
+		.then(function() {
+			document.location.href = '/';
+		})
+		.catch(function() {
+			alert('Something wrong happened, try later.');
+		})
 });
 
 // Ranking
 
 var table = document.querySelector('table tbody');
 
-WeDeploy
-	.data('db-ccc.wedeploy.sh')
-	.orderBy('maxScore', 'desc')
+data.orderBy('maxScore', 'desc')
 	.limit(500)
 	.get('players')
 	.then(function(players) {
+		console.log(players);
 		createLeaderboard(players);
+	})
+	.catch(function(err) {
+		console.log(err);
+		alert('Something wrong happened, try later.');
 	});
 
 function createLeaderboard(players) {
@@ -35,16 +42,14 @@ function createLeaderboard(players) {
 
 	for (var i = 0; i < players.length; i++) {
 		players[i].position = i + 1;
-		players[i].photoUrl = players[i].photoUrl || '/assets/images/avatar.jpg';
 		players[i].name = players[i].name || players[i].email;
 
-		if (players[i].id === window.md5(currentUser.email)) {
+		if (players[i].id === auth.currentUser.id) {
 			appendCurrentUser(players[i]);
 		}
 
 		html += '<tr>' +
 			'<td class="ranking-position">' + players[i].position + '</td>' +
-			'<td class="ranking-avatar"><img src="' + players[i].photoUrl +'"></td>' +
 			'<td class="ranking-name">' + players[i].name +'</td>' +
 			'<td class="ranking-score">' + players[i].maxScore +'</td>' +
 		'</tr>';
@@ -54,12 +59,10 @@ function createLeaderboard(players) {
 }
 
 function appendCurrentUser(user) {
-	var profileAvatar = document.querySelector('.profile-avatar');
 	var profileName = document.querySelector('.profile-name');
 	var profilePosition = document.querySelector('.profile-position');
 	var profileScore = document.querySelector('.profile-score');
 
-	profileAvatar.setAttribute('src', user.photoUrl);
 	profileName.innerText = user.name;
 	profilePosition.innerText = user.position;
 	profileScore.innerText = user.maxScore;

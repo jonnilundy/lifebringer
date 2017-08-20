@@ -1,5 +1,6 @@
 body {
 	background: #222;
+	text-align: center;
 }
 
 .logo {
@@ -12,65 +13,46 @@ body {
 	margin: 15px 0 25px;
 }
 
-.btn {
-	padding: 0;
-	height: 60px;
-	width: 100%;
-	border-radius: 4px;
-	border: 0px solid #fff;
-	margin: 0;
-	margin-bottom: 10px;
-	float: left;
-	cursor: pointer;
-	font-weight: 600;
-}
-
-.btn .label {
-	line-height: 60px;
-	color: #fff;
-	font-size: 15px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-.btn .brand {
-	width: 48px;
-	height: 60px;
-	background: rgba(255, 255, 255, 0.1);
-	float: left;
-}
-
-.btn .brand .icon {
-	margin: 18px 12px;
-	width: 24px;
-	height: 24px;
+label {
+	color: white;
 	display: block;
+	margin: 0 0 5px;
+	text-align: left;
 }
 
-.btn .brand .icon-google {
-	background: url('/assets/images/icon-google-white.png') no-repeat;
-	background-size: 24px 24px;
+input {
+	background: rgba(255, 255, 255, .2);
+	border-radius: 4px;
+	border: 0;
+	color: white;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 58px;
+	outline: none;
+	padding: 0 20px;
+	width: calc(100% - 40px);
+	margin: 0 0 10px;
 }
 
-.btn.btn-google {
-	background: #00695C;
-	transition: background .3s ease-in-out;
+button {
+	background: #8cc449;
+	border-radius: 4px;
+	border: 0;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 58px;
+	outline: none;
+	margin: 15px 0 0;
+	padding: 0 48px;
+	width: 100%;
 }
 
-.btn.btn-google:hover {
-	background: rgba(0,105,92, 0.8);
-}
-
-.btn .brand .icon-github {
-	background: url('/assets/images/icon-github-white.png') no-repeat;
-	background-size: 24px 24px;
-}
-
-.btn.btn-github {
-	background: #4527A0;
-	transition: background .3s ease-in-out;
-}
-
-.btn.btn-github:hover {
-	background: rgba(69,39,160, 0.8);
+a {
+	color: #8cc449;
+	text-decoration: none;
+	margin: 15px 0 0;
+	display: block;
 }

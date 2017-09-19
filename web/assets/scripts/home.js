@@ -1,4 +1,4 @@
-var auth = WeDeploy.auth('auth-javaone.wedeploy.io');
+var auth = WeDeploy.auth('auth-javaone.liferay.com');
 var currentUser = WeDeploy.auth().currentUser;
 
 if (currentUser) {
@@ -27,7 +27,7 @@ auth.onSignIn(function(currentUser) {
 	currentUser.id = window.md5(currentUser.email);
 
 	WeDeploy
-		.data('db-javaone.wedeploy.io')
+		.data('db-javaone.liferay.com')
 		.where('id', currentUser.id)
 		.get('players')
 		.then(function(user) {
@@ -44,7 +44,7 @@ auth.onSignIn(function(currentUser) {
 
 function createUser(currentUser) {
 	WeDeploy
-		.data('db-javaone.wedeploy.io')
+		.data('db-javaone.liferay.com')
 		.create('players', {
 			id: currentUser.id,
 			name: currentUser.name,

@@ -12,7 +12,7 @@ var logout = document.querySelector('.profile-logout');
 
 logout.addEventListener('click', function() {
 	WeDeploy
-		.auth('auth-javaone.wedeploy.io')
+		.auth('auth-javaone.liferay.com')
 		.signOut()
 		.then(function() {
 			document.location.href = '/';
@@ -27,7 +27,7 @@ logout.addEventListener('click', function() {
 var table = document.querySelector('table tbody');
 
 WeDeploy
-	.data('db-javaone.wedeploy.io')
+	.data('db-javaone.liferay.com')
 	.orderBy('maxScore', 'desc')
 	.limit(500)
 	.get('players')

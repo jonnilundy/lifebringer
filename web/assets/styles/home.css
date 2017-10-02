@@ -7,9 +7,39 @@ body {
 	width: 100%;
 }
 
-.instructions {
+p {
 	color: rgba(255, 255, 255, 0.9);
 	margin: 15px 0 25px;
+}
+
+input {
+	background: rgba(255, 255, 255, .2);
+	border-radius: 4px;
+	border: 0;
+	color: white;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 58px;
+	outline: none;
+	padding: 0 20px;
+	width: calc(100% - 40px);
+	margin: 0 0 10px;
+}
+
+button {
+	background: #8cc449;
+	border-radius: 4px;
+	border: 0;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 58px;
+	outline: none;
+	margin: 15px 0 0;
+	padding: 0 48px;
+	width: 100%;
 }
 
 .btn {
@@ -24,7 +54,14 @@ body {
 	font-weight: 600;
 }
 
-.btn .label {
+a {
+	color: #8cc449;
+	text-decoration: none;
+	margin: 15px 0;
+	display: block;
+}
+
+/*.btn .label {
 	line-height: 60px;
 	color: #fff;
 	font-size: 15px;
@@ -74,4 +111,4 @@ body {
 	margin: 15px 0 0;
 	padding: 0 48px;
 	width: 100%;
-}
+}*/

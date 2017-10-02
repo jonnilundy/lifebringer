@@ -15,6 +15,9 @@ logout.addEventListener('click', function() {
 		.auth('auth-javaone.liferay.com')
 		.signOut()
 		.then(function() {
+			localStorage.clear();
+			document.cookie = 'access_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
 			document.location.href = '/';
 		})
 		.catch(function() {

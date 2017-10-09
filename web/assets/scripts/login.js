@@ -1,4 +1,4 @@
-var auth = WeDeploy.auth('https://auth-javaone.liferay.com');
+var auth = WeDeploy.auth('https://auth-devoxx.wedeploy.io');
 
 // Check Authentication
 

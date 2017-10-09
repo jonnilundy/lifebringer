@@ -12,7 +12,7 @@ var logout = document.querySelector('.profile-logout');
 
 logout.addEventListener('click', function() {
 	WeDeploy
-		.auth('auth-javaone.liferay.com')
+		.auth('auth-devoxx.wedeploy.io')
 		.signOut()
 		.then(function() {
 			localStorage.clear();
@@ -30,7 +30,7 @@ logout.addEventListener('click', function() {
 var table = document.querySelector('table tbody');
 
 WeDeploy
-	.data('db-javaone.liferay.com')
+	.data('db-devoxx.wedeploy.io')
 	.orderBy('maxScore', 'desc')
 	.limit(500)
 	.get('players')
@@ -55,7 +55,6 @@ function createLeaderboard(players) {
 
 		html += '<tr>' +
 			'<td class="ranking-position">' + players[i].position + '</td>' +
-			'<td class="ranking-avatar"><img src="' + players[i].photoUrl +'"></td>' +
 			'<td class="ranking-name">' + players[i].name +'</td>' +
 			'<td class="ranking-score">' + players[i].maxScore +'</td>' +
 		'</tr>';
